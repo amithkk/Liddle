@@ -1,17 +1,11 @@
 #Liddle
-*jsFiddle clone for/by rlemon*
 
-###Commands
----------------------------------------------
+Project is still in planning stages.. 
 
-`CTRL+D`
+I want to create the 'developers' online editor.. heavy compatibility with common key commands.
 
-* If no selection exists copy the line contents to the line below. Set the cursor position to the end of the new line.
-* If a block is selected, copy that block directly after the end of the selection. Keep all line breaks and formatting.
+My main focus currently is obtaining a list of commands and specifying in detail what they should do in each case. 
 
----------------------------------------------
+If you would like to contribute, feel free to drop me a suggestion in an **Issue** or just fork / merge the 'Notes.md' file. 
 
-`TAB`
-
-* If no selection exists add a "\t" character directly following the caret position, and move the caret past the new "\t".
-* If a selection exists add a "\t" after the first occurence of each "\n" in the selection, keep the selection highlighted.
+Thanks!

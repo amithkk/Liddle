@@ -15,40 +15,7 @@
 
 
 	<script type="text/javascript" src="js/shortcut.js"></script>
-	<script type="text/javascript">
-		/* quick samples to show what i'm doing 
-		 *
-		 * USE Selection Ranges!!!
-		 * */
-	var CTRL_D_HANDLER = function(event) {
-		var start, end, jsc = document.getElementById('js-console');
-		for( start = jsc.selectionStart; start >= 0 && jsc.value[start] !== '\n'; --start );
-		console.log( "Line Starts @ " + start ); 
-		
-		for( end = jsc.selectionStart; end < jsc.value.length && jsc.value[end] !== '\n'; ++end );
-		console.log( "Line Ends @ " + end );
-		
-		console.log( "Current line is: " + jsc.value.substring(start, end) );
-		var line = jsc.value.substring(start, end);
-		var new_position = (jsc.value.substring(0, end) + line).length;
-		jsc.value = jsc.value.substring(0, end) + line + jsc.value.substring(end, jsc.value.length);
-		
-		jsc.setSelectionRange( new_position, new_position );
-	};
-
-	var TAB_HANDLER = function(event) {
-		var jsc = document.getElementById('js-console');
-		var caret = jsc.selectionStart;
-		var new_position = (jsc.value.substring(0, caret) + "\t").length;
-		jsc.value = jsc.value.substring(0, caret) + "\t" + jsc.value.substring(caret, jsc.value.length);
-		jsc.setSelectionRange( new_position, new_position );
-	};
-
-
-	shortcut.add("Ctrl+D", CTRL_D_HANDLER);
-		
-	shortcut.add("Tab", TAB_HANDLER);
-	</script>
+	<script type="text/javascript" src="js/keycommands.js"></script>
 
 </body>
 </html>
